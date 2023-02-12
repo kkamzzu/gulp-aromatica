@@ -1,8 +1,165 @@
 {% extends "../_templates/layout.njk" %}
 {% block content %}
 
-<div class="section-left">
-  main
-</div>
+<!-- S: main slider -->
+<main id="main-swiper-wrap">
+  <!-- swiper -->
+  <div class="swiper main-swiper">
+    <div class="swiper-wrapper">
+      <!-- custom event -->
+      <div class="swiper-slide swiper-cutsom-slide">
+        <div>
+          <a
+            href="./html/customizing.html"
+            class="swiper-text custom-swiper-text"
+          >
+            <div class="border-box">
+              <p>DO IT YOUR SELF</p>
+              <p>
+                아로마티카의 특별한 오리진 원료로 <br />나만의 아로마티카
+                만들기
+              </p>
+              <p>바로가기</p>
+            </div>
+          </a>
+        </div>
+      </div>
+      <!-- zero waste event -->
+      <div class="swiper-slide">
+        <div class="swiper-text swiper-zero-text">
+          <h5>
+            나와 지구를 생각한 제로 웨이스트 라이프 스타일을 꿈꾼다면,<br />
+            <strong>[용기내]</strong><br />
+            캠페인에 참여해보세요.
+          </h5>
+          <p><a href="./html/pickup.html">참여하기</a></p>
+        </div>
+      </div>
+      <!-- sale event -->
+      <div class="swiper-slide">
+        <a
+          href="./html/shopping.html"
+          class="swiper-text swiper-product-text"
+        >
+          <h5>
+            BLANCING YOUR <br />
+            BODY &amp; MIND
+          </h5>
+          <p>아로마티카의 티트리를 경험해보세요</p>
+          <p>UP TO 30% & SPECIAL OFFERS</p>
+        </a>
+      </div>
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination"></div>
+  </div>
+</main>
+<!-- E: main slider -->
+
+<!-- S: 새 상품 -->
+<section class="section items-section">
+  <div class="inner">
+    <div class="title-wrap type01">
+      <div class="title-text-wrap">
+        <h4>New Arrivals</h4>
+        <p>가장 먼저 만나보는 아로마티카의 신제품</p>
+      </div>
+      <div class="title-btn-wrap">
+        <button>
+          <a href="./html/newItem.html">새로운 제품 더보기</a>
+        </button>
+      </div>
+    </div>
+    <ul class="shop-4-items">
+      <li>
+        <div class="img-wrap">
+          <img src="../img/best-item/1.jpeg" alt="" />
+        </div>
+        <div class="text-wrap">
+          <p class="item-title">
+            글로우 비타 굿나잇 크림 오렌지 앤 네롤리 90g
+          </p>
+          <span class="item-price">34,000원</span>
+        </div>
+        <div class="btn-wrap">
+          <span>CART</span>
+          <div class="like-icon">
+            <i class="far fa-heart"></i>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="img-wrap">
+          <img src="../img/best-item/2.jpeg" alt="" />
+        </div>
+        <div class="text-wrap">
+          <p class="item-title">유리 돌고래 괄사</p>
+          <span class="item-price">32,000원</span>
+        </div>
+        <div class="btn-wrap">
+          <span>CART</span>
+          <div class="like-icon">
+            <i class="far fa-heart"></i>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="img-wrap">
+          <img src="../img/best-item/3.jpeg" alt="" />
+        </div>
+        <div class="text-wrap">
+          <p class="item-title">슬립타이트 필로우 미스트 100ML</p>
+          <span class="item-price">23,000원</span>
+        </div>
+        <div class="btn-wrap">
+          <span>CART</span>
+          <div class="like-icon">
+            <i class="far fa-heart"></i>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="img-wrap">
+          <img src="../img/best-item/4.jpeg" alt="" />
+        </div>
+        <div class="text-wrap">
+          <p class="item-title">언버든 스트레스 릴리프 밤</p>
+          <span class="item-price">17,600원</span>
+        </div>
+        <div class="btn-wrap">
+          <span>CART</span>
+          <div class="like-icon">
+            <i class="far fa-heart"></i>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+<!-- E: 새 상품 -->
+
+<!-- S: swiper control -->
+<script>
+  var swiper = new Swiper(".main-swiper", {
+    slidesPerView: "auto", // 한 슬라이드에 보여줄 갯수
+    spaceBetween: 6, // 슬라이드 사이 여백
+    loop: false, // 슬라이드 반복 여부
+    loopAdditionalSlides: 1, // 슬라이드 반복 시 마지막 슬라이드에서 다음 슬라이드가 보여지지 않는 현상 수정
+    pagination: false, // pager 여부
+    autoplay: {
+      // 자동 슬라이드 설정 , 비 활성화 시 false
+      delay: 100000, // 시간 설정
+      disableOnInteraction: false, // false로 설정하면 스와이프 후 자동 재생이 비활성화 되지 않음
+    },
+    navigation: {
+      // 버튼 사용자 지정
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+</script>
+<!-- E: swiper control -->
 
 {% endblock %}
+
