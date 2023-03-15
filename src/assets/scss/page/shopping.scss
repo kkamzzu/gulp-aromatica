@@ -107,6 +107,18 @@
                 border: 1px solid rgb(158, 153, 153);
               }
             }
+            .amount-wrap {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              p {
+                margin: 0 10px;
+                font-size: 26px;
+              }
+              i {
+                font-size: 12px;
+              }
+            }
           }
           .price-text {
             margin-bottom: 100px;
@@ -137,6 +149,8 @@
     margin: 0 140px;
     margin-bottom: 10px;
     .accordian {
+      display: flex;
+      justify-content: space-between;
       padding: 20px;
       transition: 0.4s;
       background-color: rgb(239, 229, 203);

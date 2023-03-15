@@ -1,7 +1,162 @@
 {% extends "../_templates/layout.njk" %}
 {% block content %}
 
-<h1>material</h1>
 
+<div class="solution-container material-container">
+  <article class="main-text-box">
+    <h3>INGREDIENTS</h3>
+    <p>아로마테라피 오리진의 액티브 원료를 소개합니다</p>
+  </article>
+<section class="material-wrap">
+  <!-- scroll -->
+<div class="scroll-wrap">
+  <div class="inner">
+    <button>
+      <h4>GRAPE FRUIT</h4>
+      <p>자몽</p>
+    </button>
+    <button>
+      <h4>ROSEMARY</h4>
+      <p>로즈마리</p>
+    </button>
+    <button>
+      <h4>SWEET ORANGE</h4>
+      <p>스윗 오렌지</p>
+    </button>
+    <button>
+      <h4>TEA TREE</h4>
+      <p>티트리</p>
+    </button>
+    <button>
+      <h4>FRANKINCENSE</h4>
+      <p>프랑킨센스</p>
+    </button>
+    <button>
+      <h4>LAVENDER</h4>
+      <p>라벤더</p>
+    </button>
+    <button>
+      <h4>PATCHOULI</h4>
+      <p>페츌리</p>
+    </button>
+    <button>
+      <h4>ROSEMARY</h4>
+      <p>로즈마리</p>
+    </button>
+    <button>
+      <h4>ROSEMARY</h4>
+      <p>로즈마리</p>
+    </button>
+    <button>
+      <h4>ROSEMARY</h4>
+      <p>로즈마리</p>
+    </button>
+    <button>
+      <h4>ROSEMARY</h4>
+      <p>로즈마리</p>
+    </button>
+    <button>
+      <h4>ROSEMARY</h4>
+      <p>로즈마리</p>
+    </button>
+    <button>
+      <h4>ROSEMARY</h4>
+      <p>로즈마리</p>
+    </button>
+    <button>
+      <h4>ROSEMARY</h4>
+      <p>로즈마리</p>
+    </button>
+    <button>
+      <h4>ROSEMARY</h4>
+      <p>로즈마리</p>
+    </button>
+  </div>
+</div>
+  <!-- 설명 -->
+<div class="explain-wrap">
+  <!-- front-card -->
+  <div class="card" id="card">
+  <div class="front-box">
+    <div class="card-text-wrap">
+      <img src="../../assets/images/ingredients/ingredients01.jpeg" alt="">
+      <h6>GRAPE FRUIT</h6>
+      <p>자몽</p>
+      <span>밝고 따뜻한 행복감이 선사하는
+        <br>긍정의 에너지
+      </span>
+    </div>
+  </div>
+  <!-- back-card -->
+  <div class="back-box">
+    <div class="card-text-wrap">
+  <div class="big-text-box">
+  <h3>GRAPFRUIT</h3>
+  <p>
+    그레이프프룻은 마음을 새롭게 하는 상쾌한 에너지로<br />
+    기분 좋은 일상을 장식해줍니다.
+  </p>
+  <img
+  src="../../assets/images/ingredients/ingredients14-01.jpeg"
+  alt="grapefruit"/>
+  </div>
+  <!--  -->
+<div class="content-box">
+<div class="dl-wrap">
+<dl>
+  <dt>학명</dt>
+  <dd>Citrus x paradisi</dd>
+</dl>
+
+<dl>
+  <dt>원산지</dt>
+  <dd>이스라엘, 미국, 북미</dd>
+</dl>
+
+<dl>
+  <dt>노트</dt>
+  <dd>탑</dd>
+</dl>
+<!--  -->
+<dl>
+  <dt>향</dt>
+  <dd>스윗, 시트러스, 프루티</dd>
+</dl>
+<!--  -->
+<dl>
+  <dt>추출부위</dt>
+  <dd>과피</dd>
+</dl>
+<!--  -->
+<dl>
+  <dt>추출법</dt>
+  <dd>압착 추출법</dd>
+</dl>
+</div>
+<div class="small-text-box">  
+    그레이프프룻은 열매(fruit)가 포도(grape)처럼 붙어
+    자라는 모습을 본따 이름 붙여졌습니다. 스윗한 시트러스
+    향기가 긍정적인 행복감을 느끼게 만들어 새롭게 시작할 수
+    있는 활기찬 에너지를 선사합니다. 미묘하고 복잡한 감정을
+    시원하게 정화시켜 주며, 지나친 스트레스가 불필요한
+    긴장감을 내려놓아 줍니다. 한여름 나무그늘 밑에서 만나는
+    단맛같은 바람처럼 청량하고 밝은 기운을 품고 있어서
+    심리적으로 정체되어있던 열기를 깨끗하게
+    씻어내려줍니다.
+</div>
+</div>
+</div>
+  </div>
+</div>
+</div>
+<script>
+  const card = document.getElementById("card");
+  card.addEventListener("click", flipCard);
+
+  function flipCard() {
+    card.classList.toggle("flipCard")
+  }
+</script>
+</section>
 
 {% endblock %}
