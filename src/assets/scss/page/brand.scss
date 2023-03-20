@@ -127,6 +127,7 @@
       padding: 30px 0;
       .history-slide {
         position: relative;
+
         .history-slide-item {
 
           .slide-img{
@@ -357,12 +358,12 @@
       height: 600px;
       margin-left: 30px;
       .inner {
-        width: 300px;
         display: flex;
         flex-direction: column;
         button {
+          text-align: center;
           margin-bottom: 10px;
-          padding: 5px 0;
+          padding: 5px;
           cursor: pointer;
           &:last-child {
             margin-bottom: 0;
@@ -370,6 +371,9 @@
           &:nth-child(2n) {
             background-color: #1a4a27;
             color: #fff;
+          }
+          &:hover {
+            background-color: #56c65b91;
           }
           h4 {
             font-size: 20px;
@@ -412,6 +416,11 @@
           justify-content: center;
           align-items: center;
           color: #ffffffd3;
+          cursor: pointer;
+          &:hover {
+            -webkit-animation: wobble-hor-bottom 1s both;
+                    animation: wobble-hor-bottom 1s both infinite;
+          }
           img {
             margin-bottom: 20px;
           }

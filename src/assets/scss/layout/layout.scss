@@ -163,6 +163,7 @@
   bottom: 30px;
   right: 30px;
   .top-btn {
+    cursor: pointer;
     background-color: #3486667d;
     border-radius: 50%;
     width: 50px;
@@ -175,7 +176,7 @@
     }
   }
   .my-wrap {
-    .user-btn,
+    #user-btn,
     #cart-btn {
       background-color: #3486667d;
       border-radius: 50%;
@@ -186,6 +187,7 @@
       align-items: center;
       margin: 20px 0;
       position: relative;
+
       p {
         top: 0px; left: 30px;
         position: absolute;
@@ -208,7 +210,7 @@
 }
 /***** E: fixed-btn *****/
 
-/***** S: modal *****/
+/**************** S: modal *****************/
 
 /* cart-wish-wrap */
 
@@ -227,7 +229,8 @@ flex-direction: column;
   padding: 0;
   }
  .wrap-window {
-  background-color: #fff;
+  background-color: rgb(240, 194, 202);
+  width: 80%;
  }
  .inner {
   padding: 0 20px;
@@ -273,43 +276,264 @@ flex-direction: column;
   width: 100%;
   margin-bottom: 30px ;
  }
- .wish-wrap {
-  width: 100%;
-  .product-wrap {
-    ul {
+
+}
+// form 
+form {
+  input {
+  }
+  .basket-wrap {
+    //head
+    .row-wrap.head {
+      height: 30px;
       display: flex;
-      justify-content: center;
-      padding: 20px 0;
-      li {
-        margin-right:10px;
+      margin-top: 10px;
+      .sub-wrap {
+        background-color: palegoldenrod;
         display: flex;
-        flex-direction: column;
         justify-content: center;
-        align-content: center;
-        &:last-child {
-          margin-right: 0;
+        align-items: center;
+        width: 100%;
+        &:nth-child(1) {
+          width: 50%;
+            .check {
+              width: 20%;
+              text-align: center;
+            }
+            .img {
+              width: 20%;
+              text-align: center;
+            }
+            .product-name {
+              width: 60%;
+              text-align: center;
+            }
         }
-        img {
-          width: 200px;
+        &:nth-child(2) {
+          width: 40%;
+          .basket-price {
+            width: 33.3333%;
+            text-align: center;
+          }
+          .num {
+            width: 33.3333%;
+            text-align: center;
+          }
+          .sum {
+            width: 33.3333%;
+            text-align: center;
+          }
         }
-        span {
+        &:nth-child(3) {
+          width: 10%;
+          .basket-remove {
+            text-align: center;
+          }
+        }
+      }
+    }
+    //data
+    .row-wrap.data {
+      display: flex;
+      margin-bottom: 30px;
+      .sub-wrap {
+      border-bottom: 1px dotted #6b6767;
+      min-height: 100px;
+      display: flex;
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+        // sub1
+        &:nth-child(1) {
+          width: 50%;
+          .check {
+            width: 20%;
+            text-align: center;
+            input {}
+          }
+          .img {
+            width: 20%;
+            text-align: center;
+            img {
+              width: 60px;
+            }
+          }
+          .product-name {
+            font-weight: 600;
+            width: 60%;
+            text-align: center;
+            span {}
+          }
+        }
+        // sub2
+       &:nth-child(2) {
+        width: 40%;
+        .basket-price {
           text-align: center;
-          max-width: 200px;
-          font-size: 12px;
-          margin: 10px 0;
-          min-height: 24px;
+          width: 33.3333%;
+          input {}
         }
+        .num {
+          text-align: center;
+          width: 33.3333%;
+          .updown {
+            input {}
+            span {}
+          }
+        }
+        .sum {
+          text-align: center;
+          width: 33.3333%;
+          
+        }
+       }
+        //sub3
+       &:nth-child(3) {
+        width: 10%;
+        .basket-remove {
+          padding: 5px 15px;
+          text-align: center;
+          border-radius: 30px;
+          background-color: #000;
+          a {
+            color: #fff;
+
+          }
+        }
+       }
+
+      }
+
+    }
+  }
+  .right-align.basket-row-remove {
+    text-align: end;
+    margin-bottom: 20px;
+    a {
+      background-color: darkcyan;
+      padding: 5px 10px;
+      border-radius: 25px;
+    }
+  }
+  .bigtext-wrap.right-align.sumcount {
+    text-align: end;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  .bigtext-wrap.right-align.box.blue {
+    text-align: end;
+    font-size: 24px;
+    color: rgb(19, 45, 213);
+    margin-bottom: 30px;
+  }
+  #go-order {
+    text-align: center;
+    .clear {}
+    .button-group.center-align.cmd {
+
+      a {
+        padding: 10px 30px;
+        border: 1px solid #6b6767;
+        background-color: #ded9d9;
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+
+
+
+/* Log-in */
+/* login-modal */
+.log-in-wrap {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0; top: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(34, 26, 26, 0.95);
+  display: none;
+  .inner {
+    background-color: #fff;
+    width: 30%;
+    position: relative;
+    padding: 40px;
+    section {
+      padding: 30px 0;
+    }
+    .log-in-title {
+      display: flex;
+      h3 {
+        font-size: 40px;
+        text-align: center;
+        width: 100%;
+        font-family: var(--en-font);
+      }
+      .close {
+        cursor: pointer;
+        font-size: 40px;
+        font-family: var(--en-font);
+        position: absolute;
+        top: 5px;
+        right: 15px;
+      }
+    }
+    .id-pw-wrap {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-content: center;
+      input {
+        font-size: 16px;
+        border: none;
+        border-bottom: 1px solid rgb(189, 187, 187);
+        height: 40px;
+        margin-bottom: 20px;
+      }
+      .find {
+        color: #505050;
+        font-size: 12px;
+        text-align: end;
+        cursor: pointer;
+      }
+    }
+    .btn-wrap {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      button {
+        cursor: pointer;
+        border: none;
+        width: 90%;
+        height: 50px;
+        background-color: var(--color-main);
+        color: #fff;
+        margin-bottom: 20px;
+      }
+      .find-way-wrap {
+        display: flex;
+        justify-content: center;
+        font-size: 13px;
         p {
-          text-align: center;
-          font-size: 12px;
+          &:first-child {
+            margin-right: 10px;
+          }
+          a {
+            border-bottom: 1px solid #333;
+          }
         }
       }
     }
   }
- }
 }
 
-/***** E: modal *****/
+/**************** E: modal ****************/
 
 
 
@@ -493,3 +717,8 @@ flex-direction: column;
     //     }
     //   }
     // }
+
+
+
+
+    

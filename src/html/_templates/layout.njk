@@ -49,7 +49,7 @@
       <p>TOP</p>
       </div>
       <div class="my-wrap">
-      <div class="user-btn">
+      <div id="user-btn">
       <i class="fa-solid fa-user"></i>
       </div>
       <div id="cart-btn">
@@ -61,7 +61,7 @@
 
     <!-- modal-section -->
         <!-- cart-modal -->
-    <div id="modal" class="cart-wish-wrap-overlay">
+    <div id="modal" class="cart-wish-wrap-overlay" style="display:display">
       <div class="wrap-window">
         <section class="cart-wrap">
           <div class="inner">
@@ -72,75 +72,241 @@
               <h4>CART</h4>
               <p>장바구니 내역을 확인해주세요.</p>
             </div>
+            
+            <!--product-wrap --!>
             <div class="product-wrap">
               <h5>Product</h5>
-              <p>장바구니가 비어 있습니다.</p>
+<form action="/page" name="order-form" id="order-form" method="post"
+  class="order-form">
+  <input type="hidden" name="order-input" value="order">
+      <div class="basket-wrap" id="basket-wrap">
+        <!-- head -->
+        <div class="row-wrap head">
+          <div class="sub-wrap">
+            <div class="check">선택</div>
+            <div class="img">이미지</div>
+            <div class="product-name">상품명</div>
+          </div>
+          <div class="sub-wrap">
+            <div class="basket-price">가격</div>
+            <div class="num">수량</div>
+            <div class="sum">합계</div>
+          </div>
+          <div class="sub-wrap">
+            <div class="basket-remove">삭제</div>
+          </div>
+          <div class="split"></div>
+        </div>
+        <!-- 상품 1 -->
+        <div class="row-wrap data">
+          <!-- sub-wrap -->
+          <div class="sub-wrap">
+            <div class="check">
+              <input type="checkbox" name="buy" value="260" checked="" >
+            </div>
+            <div class="img">
+              <img src="../../img/teatree/shampoo01.jpeg" width="60"></div>
+              <div class="product-name">
+                <span>티트리 퓨리파잉 샴푸 400ML</span>
+              </div>
+            </div>
+            
+          <!-- sub-wrap2 -->
+            <div class="sub-wrap">
+              <div class="basket-price">
+                <input type="hidden" name="p_price" id="p_price1" class="p_price" value="16000">16,000원
+                </div>
+                <div class="num">
+                  <div class="updown">
+                    <input type="text" name="p_num1" id="p_num1" size="2" maxlength="4" class="p_num" value="2" >
+                    <span><i class="fas fa-arrow-alt-circle-up up"></i></span>
+                    <span><i class="fas fa-arrow-alt-circle-down down"></i></span>
+                  </div>
+                </div>
+                <div class="sum">32,000원</div>
+            </div>
+          <!-- sub-wrap3 -->
+            <div class="sub-wrap">
+              <div class="basket-remove">
+                <a href="#">삭제</a>
+              </div>
             </div>
           </div>
-        </section>
-        <section class="wish-wrap">
-          <div class="inner">
-            <div class="title-wrap">
-              <h4>YOU MAY ALSO LIKE</h4>
+        <!-- 상품 2 -->
+        <div class="row-wrap data">
+          <!-- sub-wrap -->
+          <div class="sub-wrap">
+            <div class="check">
+              <input type="checkbox" name="buy" value="260" checked="" >
             </div>
-            <div class="product-wrap">
-              <ul>
-                <li>
-                  <img src="/img/wish/wish01.jpeg" alt="wish01" />
-                  <span>리바이빙 로즈 인퓨전 크림 클렌저 145G</span>
-                  <p>24,000원</p>
-                </li>
-                <li>
-                  <img src="/img/wish/wish02.jpeg" alt="wish02" />
-                  <span>서렌 아로마테라피 미스트 라벤더 & 마조람 200ML</span>
-                  <p>20,000원</p>
-                </li>
-                <li>
-                  <img src="/img/wish/wish03.jpeg" alt="wish03" />
-                  <span>컴포팅 칼렌둘라 디콕션 쥬시크림 150ML</span>
-                  <p>30,000원</p>
-                </li>
-                <li>
-                  <img src="/img/wish/wish01.jpeg" alt="wish01" />
-                  <span>리바이빙 로즈 인퓨전 크림 클렌저 145G</span>
-                  <p>24,000원</p>
-                </li>
-                <li>
-                  <img src="/img/wish/wish02.jpeg" alt="wish02" />
-                  <span>서렌 아로마테라피 미스트 라벤더 & 마조람 200ML</span>
-                  <p>20,000원</p>
-                </li>
-              </ul>
+            <div class="img">
+                <img src="../../img/teatree/shampoo07.jpeg" width="60"></div>
+              <div class="product-name">
+                <span>티트리 퓨리파잉 샴푸 400ML</span>
+              </div>
+            </div>
+            <!-- sub-wrap2 -->
+            <div class="sub-wrap">
+              <div class="basket-price">
+                <input type="hidden" name="p_price" id="p_price2" class="p_price" value="10000">10,000원</div>
+                <div class="num">
+                  <div class="updown">
+                    <input type="text" name="p_num2" id="p_num2" size="2" maxlength="4" class="p_num" value="3" >
+                    <span><i class="fas fa-arrow-alt-circle-up up"></i></span>
+                    <span><i class="fas fa-arrow-alt-circle-down down"></i></span>
+                  </div>
+                </div>
+                <div class="sum">30,000원</div>
+            </div>
+            <!-- sub-wrap3 -->
+            <div class="sub-wrap">
+              <div class="basket-remove">
+                <a href="#">삭제</a>
+              </div>
+            </div>
+          </div>
+        <!-- 상품 3 -->
+        <div class="row-wrap data">
+          <!-- sub-wrap -->
+          <div class="sub-wrap">
+            <div class="check">
+              <input type="checkbox" name="buy" value="260" checked="" >
+            </div>
+            <div class="img">
+            <img src="../../img/teatree/shampoo10.jpeg" width="60"></div>
+              <div class="product-name">
+                <span>티트리 퓨리파잉 샴푸 400ML</span>
+              </div>
+            </div>
+            <!-- sub-wrap2 -->
+            <div class="sub-wrap">
+              <div class="basket-price">
+                <input type="hidden" name="p_price" id="p_price3" class="p_price" value="20000">20,000원</div>
+                <div class="num">
+                  <div class="updown">
+                    <input type="text" name="p_num3" id="p_num3" size="2" maxlength="4" class="p_num" value="2" >
+                    <span><i class="fas fa-arrow-alt-circle-up up"></i></span>
+                    <span><i class="fas fa-arrow-alt-circle-down down"></i></span>
+                  </div>
+                </div>
+                <div class="sum">40,000원</div>
+            </div>
+            <!-- sub-wrap3 -->
+            <div class="sub-wrap">
+              <div class="basket-remove">
+                <a href="#">삭제</a>
+              </div>
+            </div>
+          </div>
+      </div>
+      <!-- 삭제 비우기 버튼 -->
+      <div class="right-align basket-row-remove">
+        <a href="#" class="a-button">선택상품삭제</a>
+        <a href="#" class="a-button">장바구니비우기</a>
+      </div>
+      <!-- 텍스트 -->
+      <div class="bigtext-wrap right-align sumcount"id="sum_p_num">
+        상품갯수: 7개
+      </div>
+      <div class="bigtext-wrap right-align box blue summoney"id="sum_p_price">
+        합계금액: 102,000원
+      </div>
+
+      <!-- 주문버튼 -->
+      <div id="go-order">
+        <div class="clear"></div>
+        <div class="button-group center-align cmd">
+          <a href="#">선택한 상품 주문</a>
+        </div>
+      </div>
+</form>
+
             </div>
           </div>
         </section>
       </div>
     </div>
+
+          <!-- log-in-modal -->
+      <div id="logIn-modal" class="log-in-wrap"
+      style="display:none">
+        <div class="inner">
+          <section class="log-in-title">
+            <h3>SIGN IN</h3>
+            <p class="close">x</p>
+          </section>
+          <section class="id-pw-wrap">
+            <input type="text" placeholder="아이디" />
+            <input type="password" placeholder="비밀번호" />
+            <p class="find">아이디 찾기 * 비밀번호 찾기</p>
+          </section>
+          <section class="btn-wrap">
+            <button id= "submit">로그인</button>
+            <div class="find-way-wrap">
+              <p>아이디가 없으신가요?</p>
+              <p><a href="#">회원가입</a></p>
+            </div>
+          </section>
+        </div>
+      </div>
     {% include("./default/footer.njk") %}
 
   <script>
-  const modal = document.getElementById("modal")
-  
+  //선언
+  const modal = document.getElementById("modal");
+  const userModal = document.getElementById("logIn-modal");
+
+  //함수
   function modalOn() {
     modal.style.display = "flex"
+  }
+  function modalOpen() {
+    userModal.style.display = "flex"
   }
   function modalOff() {
     modal.style.display = "none"
   }
+  function modalClose() {
+    userModal.style.display = "none"
+  }
+
+
+
   const btnModal = document.getElementById("cart-btn")
   btnModal.addEventListener("click", e => {
     modalOn()
 })
-const closeBtn = modal.querySelector(".cancel-btn")
+  const userModalBtn = document.getElementById("user-btn")
+  userModalBtn.addEventListener("click", e => {
+    modalOpen()
+})
+
+const closeBtn = modal.querySelector(".cancel-btn");
+const closeUserBtn = userModal.querySelector(".close");
+
+
 closeBtn.addEventListener("click", e => {
     modalOff()
 })
+closeUserBtn.addEventListener("click", e => {
+    modalClose()
+})
+
 modal.addEventListener("click", e => {
     const evTarget = e.target
     if(evTarget.classList.contains("cart-wish-wrap-overlay")) {
         modalOff()
     }
-})</script>
+})
+
+userModal.addEventListener("click", e => {
+    const evTargets = e.target
+    if(evTargets.classList.contains("log-in-wrap")) {
+        modalOff()
+    }
+})
+
+</script>
 </body>
 
 </html>
