@@ -229,8 +229,9 @@ flex-direction: column;
   padding: 0;
   }
  .wrap-window {
-  background-color: rgb(240, 194, 202);
+  background-color: rgb(238, 237, 232);
   width: 80%;
+  min-height: 700px;
  }
  .inner {
   padding: 0 20px;
@@ -281,15 +282,18 @@ flex-direction: column;
 // form 
 form {
   input {
+    
   }
   .basket-wrap {
+  min-height: 340px;
+
     //head
     .row-wrap.head {
       height: 30px;
       display: flex;
       margin-top: 10px;
       .sub-wrap {
-        background-color: palegoldenrod;
+        background-color: rgb(171, 238, 170);
         display: flex;
         justify-content: center;
         align-items: center;
@@ -335,7 +339,6 @@ form {
     //data
     .row-wrap.data {
       display: flex;
-      margin-bottom: 30px;
       .sub-wrap {
       border-bottom: 1px dotted #6b6767;
       min-height: 100px;
@@ -359,7 +362,6 @@ form {
             }
           }
           .product-name {
-            font-weight: 600;
             width: 60%;
             text-align: center;
             span {}
@@ -408,22 +410,23 @@ form {
   }
   .right-align.basket-row-remove {
     text-align: end;
+    margin-top: 20px;
     margin-bottom: 20px;
     a {
-      background-color: darkcyan;
+      background-color: rgb(171, 238, 170);
       padding: 5px 10px;
       border-radius: 25px;
     }
   }
   .bigtext-wrap.right-align.sumcount {
     text-align: end;
-    font-size: 24px;
-    margin-bottom: 20px;
+    font-size: 20px;
+    margin-bottom: 10px;
   }
   .bigtext-wrap.right-align.box.blue {
     text-align: end;
-    font-size: 24px;
-    color: rgb(19, 45, 213);
+    font-size: 22px;
+    color: rgb(4, 25, 164);
     margin-bottom: 30px;
   }
   #go-order {
@@ -432,10 +435,10 @@ form {
     .button-group.center-align.cmd {
 
       a {
-        padding: 10px 30px;
+        padding: 10px 20px;
         border: 1px solid #6b6767;
         background-color: #ded9d9;
-        font-size: 20px;
+        font-size: 18px;
       }
     }
   }
