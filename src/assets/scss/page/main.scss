@@ -102,7 +102,7 @@
             font-weight: 200;
             text-align: center;
             line-height: 50px;
-            padding: 20px 0;
+            margin-bottom: 20px;
           }
           strong {
             font-weight: 500;
@@ -119,8 +119,7 @@
         }
         .swiper-product-text {
           width: 900px;
-          height: 400px;
-          /* padding: 20px; */
+          min-height: 400px;
           display: flex;
           flex-direction: column;
           justify-content: space-around;
@@ -129,11 +128,12 @@
           h5 {
             font-family: serif;
             font-weight:lighter;
-            font-size: 80px;
+            font-size: 60px;
             text-align: end;
             line-height: 1.2;
           }
           p {
+
             text-align: end;
             font-size: 18px;
             font-weight: 400;

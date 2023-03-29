@@ -273,7 +273,7 @@
   .inner {
   height: 100%;
   .text-wrap {
-    padding: 20px 0;
+    margin-bottom: 60px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -290,13 +290,12 @@
   .map-wrap {
     display: flex;
     justify-content: center;
-    margin: 30px 0;
+    margin-bottom: 30px;
     li {
       width: 40%;
       margin: 0 40px;
       > div {
         .address-box {
-          margin-top: 20px;
           line-height: 1.5;
           text-align: center;
           display: flex;
@@ -307,7 +306,6 @@
             font-family: var(--kr-font);
             border-bottom:1px solid #000 ;
             font-size: 24px;
-            padding-top: 10px;
           }
           dd {
             font-family: var(--kr-font);
