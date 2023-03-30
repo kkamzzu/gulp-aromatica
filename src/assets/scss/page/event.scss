@@ -85,3 +85,52 @@ section{
   }
 }
 }
+
+.event-container {
+  .event-title-wrap {
+    padding: 80px 0;
+    width: 100%;
+    h3 {
+      font-size: 50px;
+      font-weight: 700;
+      color: #333;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .event-form-wrap {
+      display: flex;
+      justify-content: center;
+      .check-box {
+        display: flex;
+        label {
+          font-size: 18px;
+          margin-right: 50px;
+          input {
+          }
+        }
+      }
+      .search-box {
+        background-color: red;
+        input {
+          border: none;
+          width: 40px;
+          height: 140px;
+        }
+        button {
+          background-color: rebeccapurple;
+        }
+      }
+    }
+  }
+  .event-content-wrap {
+    ul {
+      li {
+        img {}
+        p {}
+        span{
+          &:last-child {}
+        }
+      }
+    }
+  }
+}

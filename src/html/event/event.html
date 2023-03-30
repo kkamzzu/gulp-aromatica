@@ -1,0 +1,74 @@
+{% extends "../_templates/layout.njk" %}
+{% block content %}
+
+
+  <div class="event-container">
+    <div class="event-title-wrap">
+      <h3>이벤트</h3>
+      <div class="event-form-wrap">
+        <form class="check-box" action="getform.php" method="get">
+          <label><input type="radio" name="제목" />제목</label><br />
+          <label><input type="radio" name="내용" />내용</label>
+          <form action="" class="search-box">
+            <input type="search" name="search" />
+            <button>검색</button>
+          </form>
+      </form>
+      </div>
+    </div>
+    <div class="event-content-wrap">
+      <ul>
+        <li>
+          <img src="#" alt="">
+          <p>여름맞이 쿠폰</p>
+          <span>매주 달라지는 쿠폰과 함께 쇼핑하기!</span>
+          <span>2023-07-01~2023-08-31</span>
+        </li>
+        <li>
+          <img src="#" alt="">
+          <p>나만의 아로마티카 만들기</p>
+          <span>커스터마이징 open</span>
+          <span>2023-03-01~</span>
+        </li>
+        <li>
+          <img src="#" alt="">
+          <p>카카오톡 선물하기 할인</p>
+          <span>카카오톡으로 선물해보세요!</span>
+          <span>2023-07-01~2023-08-31</span>
+        </li>
+        <li>
+          <img src="#" alt="">
+          <p>여름맞이 쿠폰</p>
+          <span>매주 달라지는 쿠폰과 함께 쇼핑하기!</span>
+          <span>2023-07-01~2023-08-31</span>
+        </li>
+        <li>
+          <img src="#" alt="">
+          <p>여름맞이 쿠폰</p>
+          <span>매주 달라지는 쿠폰과 함께 쇼핑하기!</span>
+          <span>2023-07-01~2023-08-31</span>
+        </li>
+        <li>
+          <img src="#" alt="">
+          <p>여름맞이 쿠폰</p>
+          <span>매주 달라지는 쿠폰과 함께 쇼핑하기!</span>
+          <span>2023-07-01~2023-08-31</span>
+        </li>
+        <li>
+          <img src="#" alt="">
+          <p>여름맞이 쿠폰</p>
+          <span>매주 달라지는 쿠폰과 함께 쇼핑하기!</span>
+          <span>2023-07-01~2023-08-31</span>
+        </li>
+        <li>
+          <img src="#" alt="">
+          <p>여름맞이 쿠폰</p>
+          <span>매주 달라지는 쿠폰과 함께 쇼핑하기!</span>
+          <span>2023-07-01~2023-08-31</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+
+{% endblock %}
