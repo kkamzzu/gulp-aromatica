@@ -123,9 +123,22 @@ section{
     }
   }
   .event-content-wrap {
+    margin: 0 100px;
+    background-color: rebeccapurple;
     ul {
+      display: flex;
       li {
-        img {}
+        background-color: powderblue;
+        margin-right: 20px;
+        min-width: 400px;
+        min-height: 300px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        img {
+          background-color: red;
+        }
         p {}
         span{
           &:last-child {}
