@@ -124,6 +124,7 @@ section{
   }
   .event-content-wrap {
     margin: 0 100px;
+    margin-bottom: 100px;
     background-color: rebeccapurple;
     ul {
       display: flex;
@@ -137,11 +138,19 @@ section{
         justify-content: center;
         align-items: center;
         img {
-          background-color: red;
+          margin-bottom: 10px;
         }
-        p {}
+        p {
+          margin-bottom: 10px;
+          font-weight: 700;
+        }
         span{
-          &:last-child {}
+          color: #333;
+          font-size: 16px;
+          &:last-child {
+            margin-top: 15px;
+            font-size: 18px;
+          }
         }
       }
     }
