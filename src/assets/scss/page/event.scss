@@ -95,13 +95,16 @@ section{
       font-weight: 700;
       color: #333;
       text-align: center;
-      margin-bottom: 30px;
+      margin-bottom: 60px;
     }
     .event-form-wrap {
       display: flex;
       justify-content: center;
+      align-items: center;
       .check-box {
         display: flex;
+        align-items: center;
+        justify-content: center;
         label {
           font-size: 18px;
           margin-right: 50px;
@@ -110,49 +113,47 @@ section{
         }
       }
       .search-box {
-        background-color: red;
         input {
+          width: 300px;
+          height: 30px;
+          margin-right: 20px;
           border: none;
-          width: 40px;
-          height: 140px;
+          border-bottom: 1px solid #333;
         }
-        button {
-          background-color: rebeccapurple;
+        .event-btn {
+          width: 100px;
+          height: 30px;
+          font-size: 20px;
         }
       }
     }
   }
   .event-content-wrap {
-    margin: 0 100px;
-    margin-bottom: 100px;
-    background-color: rebeccapurple;
     ul {
       display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
       li {
-        background-color: powderblue;
-        margin-right: 20px;
-        min-width: 400px;
-        min-height: 300px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        margin-bottom: 50px;
+        text-align: center;
+        &:last-child {
+          margin-bottom: 80px;
+        }
         img {
-          margin-bottom: 10px;
+          min-width:800px;
+          min-height: 685px;
+          margin-bottom: 20px;
         }
-        p {
-          margin-bottom: 10px;
-          font-weight: 700;
-        }
-        span{
-          color: #333;
-          font-size: 16px;
-          &:last-child {
-            margin-top: 15px;
-            font-size: 18px;
+        .event-content-title {
+            font-size: 24px;
           }
+        }
+        span {  
+          display:block;
+          margin: 10px 0;
+          color: #333;
         }
       }
     }
   }
-}
