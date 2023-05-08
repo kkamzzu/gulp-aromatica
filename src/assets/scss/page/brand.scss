@@ -268,7 +268,6 @@
 .store-container{
 .store-wrap {
   margin-top: 60px;
-  height: 100vh;
   width: 100%;
   .inner {
   height: 100%;
@@ -290,7 +289,7 @@
   .map-wrap {
     display: flex;
     justify-content: center;
-    margin-bottom: 30px;
+    margin-bottom: 120px;
     li {
       width: 40%;
       margin: 0 40px;
@@ -351,46 +350,59 @@
   .material-wrap {
     display: flex;
     justify-content: center;
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
     .scroll-wrap {
       overflow-y: scroll;
       height: 600px;
       margin-left: 30px;
-      .inner {
-        display: flex;
-        flex-direction: column;
-        button {
-          text-align: center;
-          margin-bottom: 10px;
-          padding: 5px;
-          cursor: pointer;
+      .scoll-item-list {
+        li {
           &:last-child {
-            margin-bottom: 0;
+            button {
+              margin-bottom: 0;
+            }
           }
           &:nth-child(2n) {
-            background-color: #1a4a27;
-            color: #fff;
+            button {
+              background-color: #1a4a27;
+              color: #fff;
+            }
           }
-          &:hover {
-            background-color: #56c65b91;
-          }
-          h4 {
-            font-size: 20px;
+          button {
+            text-align: center;
             margin-bottom: 10px;
+            padding: 5px;
+            cursor: pointer;
+            width: 100%;
+            &:hover {
+              background-color: #56c65b91;
+            }
+            h4 {
+              font-size: 20px;
+              margin-bottom: 10px;
+            }
+            p {font-size: 16px;}
           }
-          p {font-size: 16px;}
         }
       }
+      
     }
     .explain-wrap {
       background-color: #fff;
       margin:0 30px;
       width: 80%;
       .card {
+        display: none;
         position: relative;
         width: 100%;
         height: 100%;
         transform-style: preserve-3d;
         transition: all 0.8s ease;
+        &.active {
+          display: block;
+        }
       .front-box {
         width: 100%;
         display: flex;
@@ -502,3 +514,80 @@
   }
   }
 }
+
+// S: store media query
+@media all and (max-width: 1160px) {
+  .store-container {
+    .store-wrap {
+      .inner {
+        .map-wrap {
+          li {
+            margin: 0;
+            width: calc(50% - 20px);
+            &:first-child {
+              margin-right: 40px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media all and (max-width: 768px) {
+  .store-container {
+    .store-wrap {
+      margin-top: 10.417vw; /* 80 */
+      .inner {
+        .text-wrap {
+          margin-bottom: 9.115vw; /* 70 */
+          h2 {
+            font-size: 5.990vw; /* 46 */
+            margin-bottom: 3.255vw; /* 25 */
+          }
+          p {
+            font-size: 3.385vw; /* 26 */
+          }
+        }
+        .map-wrap {
+          flex-wrap : wrap;
+          margin-bottom: 18.229vw; /* 140 */
+          li {
+            width: 100%;
+            &:first-child {
+              margin-right: 0;
+              margin-bottom: 6.510vw; /* 50 */
+            }
+            > div {
+              .address-box {
+                margin-bottom: 5.208vw; /* 40 */
+                dt {
+                  font-size: 3.646vw; /* 28 */
+                  border-width: 0.260vw; /* 2 */
+                  margin-bottom: 3.255vw; /* 25 */
+                }
+                dd {
+                  padding: 0;
+                  p {
+                    font-size: 3.385vw; /* 26 */
+                    line-height: 1;
+                    &:nth-child(2) {
+                      margin: 1.953vw 0; /* 15 */
+                    }
+                }
+              }
+              .map-link {
+                a {
+                  padding: 1.302vw 1.953vw; /* 10, 15 */
+                  border-width: 0.260vw; /* 2 */
+                }
+              }
+            }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+// E: store media query

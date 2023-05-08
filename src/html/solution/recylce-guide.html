@@ -73,27 +73,43 @@
         <h6>유리 분리배출방법</h6>
       </div>
       <div class="info-img-wrap">
-        <ul class="book-mark-wrap">
-          <li class="is_on">
+        <ul class="book-mark-wrap" id="glass-guide-tab">
+          <li class="active" data-glasstarget="target01">
             <img src="../../assets/images/package/recycle/glass_001.png" alt="">
             <p>펌프</p>
           </li>
-          <li>
+          <li data-glasstarget="target02">
             <img src="../../assets/images/package/recycle/glass_002.png" alt="">
             <p>캡</p>
           </li>
-          <li>
+          <li data-glasstarget="target03">
             <img src="../../assets/images/package/recycle/glass_003.png" alt="">
 
             <p>스포이드</p>
           </li>
         </ul>
-        <ul class="guide-img">
+        <ul class="guide-img" id="target01" style="display: flex;">
           <li>
             <img src="../../img/package/recycle/glass_001.png" alt="" />
           </li>
           <li>
             <img src="../../img/package//recycle/glass_001_B.png" alt="" />
+          </li>
+        </ul>
+        <ul class="guide-img" id="target02">
+          <li>
+            <img src="../../img/package/recycle/glass_002.png" alt="" />
+          </li>
+          <li>
+            <img src="../../img/package//recycle/glass_002_B.png" alt="" />
+          </li>
+        </ul>
+        <ul class="guide-img" id="target03">
+          <li>
+            <img src="../../img/package/recycle/glass_003.png" alt="" />
+          </li>
+          <li>
+            <img src="../../img/package//recycle/glass_003_B.png" alt="" />
           </li>
         </ul>
       </div>
@@ -135,6 +151,36 @@
 
   <!-- footer -->
   <div id="footer"></div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+
+      // S: 유리 분리 배출 방법 
+      const glassTabListItem = document.querySelectorAll('#glass-guide-tab li');
+      for(let i = 0; i < glassTabListItem.length; i++) {
+        glassTabListItem[i].addEventListener('click', () => {
+
+          // 이미지 아이디값을 가져온 변수
+          let target = document.querySelector('#' + glassTabListItem[i].dataset.glasstarget)
+
+          // 형제 노드 remove를 위한 반복문
+          for(let i = 0;i < glassTabListItem.length; i++) {
+           glassTabListItem[i].classList.remove('active') 
+           let removeTarget = document.querySelector('#' + glassTabListItem[i].dataset.glasstarget)
+           removeTarget.style.display = 'none'
+          }
+
+          glassTabListItem[i].classList.add('active')
+          target.style.display = 'flex'
+        })
+      }
+      // E: 유리 분리 배출 방법 
+
+
+      // S: 플라스틱 분리 배출 방법
+      // E: 플라스틱 분리 배출 방법
+    })
+  </script>
 
 
 {% endblock %}

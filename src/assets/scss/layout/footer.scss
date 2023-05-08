@@ -58,6 +58,9 @@ footer {
           line-height: 1.4;
           margin-bottom: 10px;
         }
+        .mo {
+          display: none;
+        }
       }
       small {
         font-size: 12px;
@@ -66,3 +69,83 @@ footer {
     }
   }
 }
+
+
+// S: footer media
+@media all and (max-width: 900px) {
+  footer {
+    .footer-wrap {
+      align-items: flex-start;
+      .footer-img-wrap {
+        max-width: 180px;
+        margin-right: 20px;
+      }
+    }
+    .footer-content-wrap {
+      .footer-txt {
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
+
+@media all and (max-width: 768px) {
+  footer {
+    padding: 7.813vw 0; /* 60 */
+    .footer-wrap {
+      flex-direction: column;
+      align-items: center;
+      .footer-img-wrap {
+        margin-right: 0;
+        margin-bottom: 3.906vw; /* 30 */
+        max-width: 33.854vw; /* 260 */
+      }
+    }
+    .footer-content-wrap {
+      width: 100%;
+      .footer-txt {
+        justify-content: center;
+        text-align: center;
+        margin-bottom: 3.906vw; /* 30 */
+        dl {
+          width: calc(50% - 1.302vw); /* 10 */
+          &:first-child {
+            margin-right: 2.604vw; /* 20 */
+          }
+          dt {
+            font-size: 3.385vw; /* 26 */
+            margin-bottom: 1.953vw; /* 15 */
+          }
+          dd {
+            font-size: 3.125vw; /* 24 */
+            p {
+              &:not(:last-child) {
+                margin-bottom: 1.302vw; /* 10 */
+              }
+            }
+          }
+        }
+      }
+      .small-wrap {
+        text-align: center;
+        .small-text {
+          &:first-child {
+            font-size: 3.385vw; /* 26 */
+            margin-bottom: 1.563vw; /* 12 */
+          }
+          &:nth-of-type(2) {
+            font-size: 3.125vw; /* 24 */
+            margin-bottom: 2.604vw; /* 20 */
+          }
+          .mo {
+            display: block;
+          }
+        }
+        small {
+          font-size: 3.125vw; /* 24 */
+        }
+      }
+    }
+  }
+}
+// E: footer media
