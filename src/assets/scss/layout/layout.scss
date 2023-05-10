@@ -687,25 +687,32 @@ form {
 // S: new media query
 @media all and (max-width: 1160px) {
   .shopping-product-wrap .goods-wrap {
-    margin: 0 -10px;
+    margin: 0 -0.862vw; /* -10 */
   }
   .shopping-product-wrap .goods-wrap li {
     width: 33.333%;
-    padding: 0 10px;
+    padding: 0 0.862vw; /* 10 */
   }
   .shopping-product-wrap .goods-wrap li:nth-child(n+4) {
-    margin-top: 20px;
+    margin-top: 1.724vw; /* 20 */
   }
 }
 	
 
 @media (min-width: 768px) and (max-width: 1159px){
+  .shopping-main-img{
+    height: 300px;
+    background-position: 50% center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-bottom: 60px;
+  }
   .shopping-product-wrap {
     .goods-wrap {
       li {
-        width: 33.333%;
-        padding: 0 10px;
-        margin-bottom: 50px;
+        width: 33.333%; 
+        padding: 0 1.302vw; /* 10 */
+        margin-bottom: 6.510vw; /* 50 */
         &:nth-child(n+4) {
           margin-top: 0;
 
@@ -713,18 +720,18 @@ form {
         div {
           .text-box {
             width: 100%;
-            font-size: 16px;
+            font-size: 2.083vw; /* 16 */
             flex-direction: column;
             p {
               width: 100%;
-              min-height: 40px;
+              min-height: 5.208vw; /* 40 */
               text-align: center;
-              margin-bottom: 18px;
+              margin-bottom: 2.344vw; /* 18 */
             }
             span {
               text-align: center;
-              width: 100%;
-              font-size: 18px;
+              width: 100%; /*  */
+              font-size: 2.344vw; /* 18 */
               display: flex;
               justify-content: center;
             }
@@ -737,11 +744,15 @@ form {
 }
 	
 @media (min-width: 500px) and (max-width: 767px) {
+  .shopping-main-img{
+  display: none;
+  }
   .shopping-product-wrap {
+    margin-top: 20vw; /* 100 */
     .goods-wrap {
       li {
         width: 50%;
-        margin-bottom: 80px;
+        margin-bottom: 16vw; /* 80 */
         &:nth-child(n+4) {
         margin-top: 0;
         }
@@ -749,19 +760,19 @@ form {
       div {
         .text-box {
           flex-direction: column;
-          padding: 20px 0 30px 0;
+          padding: 4vw 0 6vw 0; /* 20 0 30 0 */
           width: 100%;
           p {
             min-width: 100%;
-            margin-bottom: 10px;
-            font-size: 20px;
-            min-height: 50px;
+            margin-bottom: 2vw; /* 10 */
+            font-size: 4vw; /* 20 */
+            min-height: 10vw; /* 50 */
             text-align: center;
           }
           // why..
           span {
             width: 100%;
-            font-size: 20px;
+            font-size: 4vw; /* 20 */
             color: #333;
             justify-content: center;
           }
