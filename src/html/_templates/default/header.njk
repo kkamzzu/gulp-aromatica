@@ -46,27 +46,25 @@
       </ul>
     </div>
     <!-- hambuger  menu bar -->
-    <p class="menu">
+    <div class="mo-menu-wrap">
       <span></span>
       <span></span>
       <span></span>
-      <span></span>
-      <span></span>
-    </p>
-    <!-- cart,wish -->
-    <!-- 
-    <div class="my-page-wrap">
-      <div class="my-info-wrap">
-        <span class="material-symbols-outlined"> shopping_bag </span>
-      </div>
-      <div class="my-info-wrap">
-        <span class="material-symbols-outlined"> badge </span>
-      </div>
     </div>
-    -->
   </div>
   <div class="header-dim"></div>
 </header>
+
+<div class="sidemenu">
+  <div class="sidemenu-dim"></div>
+  <div class="sidemenu-wrap">
+    <div class="sidemenu-header">
+      <div class="sidemenu-close-btn">
+        닫기버튼
+      </div>
+    </div>
+  </div>
+</div>
 
 <script>
   $(document).ready(function () {
@@ -78,5 +76,15 @@
       .mouseout(function () {
         $("header").removeClass("on");
       });
+
+    $(".mo-menu-wrap")
+      .click(function() {
+        $(".sidemenu").addClass("active")
+      })
+
+    $(".sidemenu-close-btn")
+      .click(function() {
+        $(".sidemenu").removeClass("active")
+      })
   });
 </script>

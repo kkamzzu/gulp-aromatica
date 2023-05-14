@@ -540,11 +540,6 @@ form {
 /**************** E: modal ****************/
 
 
-
-@media all and (max-width: 1160px) {
-
-}
-
 /* S: shopping-main-img */
 .shopping-main-img{
   height: 600px;
@@ -621,9 +616,9 @@ form {
   .goods-wrap {
     display: flex;
     flex-wrap: wrap;
-    margin: 0 -20px;
+    margin: 0 -10px;
     li {
-      padding: 0 20px;
+      padding: 0 10px;
       width: 25%;
       &:nth-child(n+5) {
         margin-top: 40px;
@@ -652,6 +647,7 @@ form {
             color: #333;
             display: flex;
             justify-content: end;
+            font-weight: 300;
           }
         }
         button {
@@ -670,10 +666,10 @@ form {
             transform: translateY(-50%);
             width: 20px;
             height: 20px;
-            &:hover {
-              i{
-                will-change: transform;
-                animation: heartBeat 1s linear infinite;
+            cursor: pointer;
+            .fa-solid {
+              &.fa-heart {
+                color: red;
               }
             }
           }
@@ -685,51 +681,33 @@ form {
 
 
 // S: new media query
+
+
 @media all and (max-width: 1160px) {
-  .shopping-product-wrap .goods-wrap {
-    margin: 0 -0.862vw; /* -10 */
-  }
-  .shopping-product-wrap .goods-wrap li {
-    width: 33.333%;
-    padding: 0 0.862vw; /* 10 */
-  }
-  .shopping-product-wrap .goods-wrap li:nth-child(n+4) {
-    margin-top: 1.724vw; /* 20 */
-  }
-  .shopping-main-img{
-    height: 300px;
-    background-position: 50% center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    margin-bottom: 60px;
-  }
   .shopping-product-wrap {
     .goods-wrap {
-      li {
-        width: 33.333%; 
-        padding: 0 1.302vw; /* 10 */
-        margin-bottom: 6.510vw; /* 50 */
-        &:nth-child(n+4) {
-          margin-top: 0;
-
+      li{
+        width: 33.333%;
+        &:nth-child(n+4){
+          margin-top: 30px;
         }
-        div {
-          .text-box {
-            width: 100%;
-            font-size: 2.083vw; /* 16 */
+        >div {
+          .img-box {
+            margin-bottom: 15px;
+          }
+          .text-box  {
+            padding: 0;
             flex-direction: column;
+            align-items: flex-start;
+            min-height: 0;
+            margin-bottom: 20px;
             p {
+              margin-bottom: 8px;
+              line-height: 1.5;
               width: 100%;
-              min-height: 5.208vw; /* 40 */
-              text-align: center;
-              margin-bottom: 2.344vw; /* 18 */
             }
             span {
-              text-align: center;
-              width: 100%; /*  */
-              font-size: 2.344vw; /* 18 */
-              display: flex;
-              justify-content: center;
+              justify-content: flex-start;
             }
           }
         }
@@ -737,72 +715,14 @@ form {
     }
   }
 }
-	
-@media all and (max-width: 768px) {
-  .shopping-main-img{
-  display: none;
-  }
+
+@media all and (max-width: 900px) {
   .shopping-product-wrap {
-    .text-wrap {
-      &::after {
-        width: 100%;
-        // left: 0;
-      }
-      h3 {
-        justify-content: flex-start;
-        font-size: 5.208vw; /* 40 */
-      }
-      ul { 
-        width: 50%;
-        flex-wrap: wrap;
-        justify-content: flex-start;
-        margin-bottom: 19.531vw; /* 150 */
-        li {
-          padding-right: 100px;
-          &:nth-child(2) {
-            background-color: #fff;
-            a { color: #000;
-            font-weight: 600;}
-          }
-          &:last-child {
-            // margin-bottom: 5.208vw; /* 40 */
-          }
-          a {
-            font-size: 2.344vw; /* 18 */
-            color: #505050;
-           
-          }
-        }
-      }
-    }
-    margin-top: 20vw; /* 100 */
     .goods-wrap {
-      li {
+      li{
         width: 50%;
-        margin-bottom: 16vw; /* 80 */
-        &:nth-child(n+4) {
-        margin-top: 0;
-        }
-        div {
-          .text-box {
-            flex-direction: column;
-            padding: 4vw 0 6vw 0; /* 20 0 30 0 */
-            width: 100%;
-            p {
-              min-width: 100%;
-              margin-bottom: 2vw; /* 10 */
-              font-size: 4vw; /* 20 */
-              min-height: 10vw; /* 50 */
-              text-align: center;
-            }
-            // why..
-            span {
-              width: 100%;
-              font-size: 3.5vw; /* 20 */
-              color: #333;
-              justify-content: center;
-            }
-          }
+        &:nth-child(n+3){
+          margin-top: 20px;
         }
       }
     }
@@ -823,6 +743,71 @@ form {
   .inner {
     padding: 0 5.208vw; /* 40 */
   }
+  .shopping-main-img {
+    height: 84.635vw; /* 650 */
+    margin-bottom: 9.115vw; /* 70 */
+  }
+  .shopping-product-wrap {
+    margin-bottom: 10.417vw; /* 80 */
+    .text-wrap {
+      margin-bottom: 10.417vw; /* 80 */
+      &::after {
+        width: 75%;
+        height: 0.260vw; /* 2 */
+        bottom : -1.953vw; /* 15 */
+      }
+      h3 {
+        font-size: 5.208vw; /* 40 */
+      }
+      p {
+        font-size: 3.906vw; /* 30 */
+        margin-top: 2.604vw; /* 20 */
+      }
+    }
+    .goods-wrap {
+      margin: 0 -1.302vw; /* 10 */
+      li {
+        padding: 0 1.302vw; /* 10 */
+        &:nth-child(n+3) {
+          margin-top: 2.604vw; /* 20 */
+        }
+        > div {
+          .img-box {
+            margin-bottom: 2.604vw; /* 20 */
+          }
+          .text-box {
+            margin-bottom: 3.906vw; /* 30 */
+            min-height: 13.672vw; /* 105 */
+            p {
+              margin-bottom: 1.563vw; /* 12 */
+              font-size: 3.385vw; /* 26 */
+              line-height: 1.3;
+            }
+            span {
+              width: 100%;
+              font-size: 3.125vw; /* 24 */
+            }
+          }
+          button {
+            padding: 2.083vw; /* 16 */
+            height: 7.813vw; /* 60 */
+            font-size: 3.125vw; /* 24 */
+            .like-icon {
+              width: auto;
+              height: auto;
+              right: 2.083vw; /* 16 */
+              i {
+                &::before {
+                  font-size: 2.604vw; /* 20 */
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
 // E: 공통 레이아웃 media
+
 

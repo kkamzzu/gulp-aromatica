@@ -401,6 +401,15 @@ Number.prototype.formatNumber = function(){
   while (regex.test(nstr)) nstr = nstr.replace(regex, '$1' + ',' + '$2');
   return nstr;
 };
+
+// 하트 아이콘 클래스 컨트롤
+const heartIconElems = document.querySelectorAll('.far.fa-heart');
+  for(let i = 0; i < heartIconElems.length; i++) {
+    heartIconElems[i].addEventListener('click', () => {
+      heartIconElems[i].classList.toggle('far');
+      heartIconElems[i].classList.toggle('fa-solid')
+    })
+  }
 </script>
 </body>
 

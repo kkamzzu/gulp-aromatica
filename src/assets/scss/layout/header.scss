@@ -122,23 +122,8 @@ header {
         }
       }
     }
-    .menu {
-      /*! hambuher menu */
-      width: 30px;
-      height: 30px;
-      position: absolute;
-      top: 15px;
-      left: 34px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      /*! display: none; */
-      visibility: hidden;
-      span {
-        display: block;
-        height: 3px;
-        background-color: #fff;
-      }
+    .mo-menu-wrap {
+      display: none;
     }
     .my-page-wrap {
       /*! cart, wish btn */
@@ -178,6 +163,66 @@ header {
       top: 60px;
       left: 0;
       background-color: #505050;
+    }
+  }
+}
+
+.sidemenu {
+  display: none;
+}
+
+@media all and (max-width: 1024px) {
+  header {
+    .header-wrap {
+      .header-nav {
+        display: none;
+      }
+      .mo-menu-wrap {
+        display: block;
+        width: 30px;
+        height: 20px;
+        position: absolute;
+        top: 50%;
+        right: 20px;
+        transform: translateY(-50%);
+        cursor: pointer;
+        span {
+          display: inline-block;
+          position: absolute;
+          width: 100%;
+          height: 2px;
+          background-color: #fff;
+          &:nth-child(1) {
+            top: 0;
+          }
+          &:nth-child(2) {
+            top: 9px;
+          }
+          &:nth-child(3) {
+            top: 18px;
+          }
+        }
+      }
+    }
+  }
+  .sidemenu {
+    display: block;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100%;
+    z-index: 200;
+    background-color: rgba(0,0,0,0.6);
+    transition: all 0.3s linear;
+    &.active {
+      right: 0;
+    }
+    .sidemenu-wrap {
+      width: 40vw;
+      background: red;
+      height: 100%;
+      margin-left: auto;
     }
   }
 }
