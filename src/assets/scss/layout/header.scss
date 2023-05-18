@@ -205,6 +205,7 @@ header {
       }
     }
   }
+
   .sidemenu {
     display: block;
     position: fixed;
@@ -218,6 +219,16 @@ header {
     &.active {
       right: 0;
     }
+    .sidemenu-close-btn {
+      display: flex;
+      justify-content: flex-end;
+      p {
+        background-color: tan;
+        font-size: 35px;
+        padding: 10px;
+      }
+
+    }
     .sidemenu-wrap {
       width: 40vw;
       background: rgb(92, 203, 70);
@@ -229,27 +240,29 @@ header {
       justify-content: center;
       align-items: center;
       flex-direction: column;
-      padding: 60px 0;
       background-color: tan;
       .reaction-tab-menu {
         background-color: pink;
         width: 100%;
         text-align: center;
         margin-bottom: 30px;
+        
         &:last-child {
           margin-bottom: 0;
         }
         > a {
+          background-color: gold;
+          margin-bottom: 26px;
           font-size: 26px;
-          display: inline-block;
-          margin-bottom: 20px;
+          display: block;
+
         }
-        .reaction-tab-manu-small {
-          background-color: thistle;
-          padding: 16px 0;
+        .reaction-tab-menu-small {
+          background-color: yellow;
           li {
             a {
-
+              display: inline-block;
+              margin-bottom: 20px;
               font-size: 20px;
             }
           }
