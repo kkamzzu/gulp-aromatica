@@ -223,7 +223,8 @@ header {
       display: flex;
       justify-content: flex-end;
       p {
-        background-color: tan;
+        font-weight: 500;
+        color: #fff;
         font-size: 35px;
         padding: 10px;
       }
@@ -231,8 +232,8 @@ header {
     }
     .sidemenu-wrap {
       width: 40vw;
-      background: rgb(92, 203, 70);
-      height: 100%;
+      min-height: 100%;
+      background-color: #0d2814c1;
       margin-left: auto;
     }
     .reaction-tab {
@@ -240,30 +241,46 @@ header {
       justify-content: center;
       align-items: center;
       flex-direction: column;
-      background-color: tan;
       .reaction-tab-menu {
-        background-color: pink;
+        &:last-child {
+          a {
+            margin-bottom: 0;
+          }
+        }
         width: 100%;
         text-align: center;
-        margin-bottom: 30px;
-        
-        &:last-child {
-          margin-bottom: 0;
-        }
+        margin-bottom: 40px;
         > a {
-          background-color: gold;
-          margin-bottom: 26px;
+          background-color: #143e1f;
+          color: #fff;
+          padding: 10px 0;
           font-size: 26px;
           display: block;
 
         }
         .reaction-tab-menu-small {
-          background-color: yellow;
           li {
+            &:hover {
+              background-color: #359b5094;
+              color: #000;
+            }
+            &:last-child {
+              a {
+                margin-bottom: 0;
+              }
+            }
+            &:first-child {
+              a {
+                margin-top: 20px;
+              }
+            }
             a {
+              color: #fff;
+              width: 100%;
               display: inline-block;
               margin-bottom: 20px;
               font-size: 20px;
+
             }
           }
         }
